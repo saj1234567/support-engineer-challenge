@@ -1,4 +1,5 @@
-class ApplicationMailer < ActionMailer::Base
-  default from: "from@example.com"
-  layout "mailer"
+class MyMailer < ApplicationMailer
+  def send_email
+    mail(to: 'recipient@example.com', subject: 'Email Subject')
+  end
 end
